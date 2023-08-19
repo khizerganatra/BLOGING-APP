@@ -53,7 +53,7 @@ import { getFirestore  ,
           getDocs,
           deleteDoc,
           doc,
-          
+          onSnapshot,
           setDoc } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-firestore.js";
 
 
@@ -230,7 +230,9 @@ function login(){
 
  async function getPosts (){
 
-    const querySnapshot = await getDocs(collection(db, `postApp/${auth.currentUser.uid}/userBlog`));
+
+
+    const querySnapshot = await getDocs(collection(db, ""));
 
     // postContainer.innerHTML = null;
     
